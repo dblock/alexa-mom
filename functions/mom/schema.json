@@ -1,0 +1,29 @@
+{
+   "intents": [
+      {
+         "intent": "AMAZON.StopIntent",
+         "slots": []
+      },
+      {
+         "intent": "AMAZON.CancelIntent",
+         "slots": []
+      },
+      {
+         "intent": "AMAZON.HelpIntent",
+         "slots": []
+      },
+      {
+         "intent": "StartIntent",
+         "slots": [
+            {
+               "name": "number",
+               "type": "AMAZON.NUMBER"
+            }
+         ]
+      },
+      {
+         "intent": "MomIntent",
+         "slots": []
+      }
+   ]
+}

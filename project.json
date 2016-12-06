@@ -1,0 +1,10 @@
+{
+  "name": "alexa",
+  "description": "Send two Alexas into a loop.",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::585031190124:role/service-role/alexa-mom",
+  "environment": {
+    "ENV": "lambda"
+  }
+}
