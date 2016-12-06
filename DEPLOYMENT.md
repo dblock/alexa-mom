@@ -1,11 +1,5 @@
 ## Deploy to AWS Lambda
 
-### Create a Lambda Function
-
-Go to [AWS Lambda](https://console.aws.amazon.com/lambda) and create a `alexa-mom` function with a new IAM role, `alexa-mom`.
-
-The `alexa-mom` role is used in [project.json](project.json).
-
 ### Install Apex
 
 Install [Apex](https://github.com/apex/apex).
@@ -60,20 +54,25 @@ If logs don't appear in CloudWatch, manually attach the following policy.
 
 ```json
 {
-  "Effect": "Allow",
-  "Action": [
-    "logs:CreateLogGroup",
-    "logs:CreateLogStream",
-    "logs:PutLogEvents"
-  ],
-  "Resource": "arn:aws:logs:*:*:*"
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:*"
+    }
+  ]
 }
 ```
 
 ### Test
 
 ```
-apex invoke mom < test/functions/mom/LaunchRequest.json
+apex invoke mom < test/functions/mom/fixtures/LaunchRequest.json
 ```
 
 This should return a welcome message.
