@@ -14,12 +14,7 @@
       },
       {
          "intent": "StartIntent",
-         "slots": [
-            {
-               "name": "number",
-               "type": "AMAZON.NUMBER"
-            }
-         ]
+         "slots": []
       },
       {
          "intent": "MomIntent",
